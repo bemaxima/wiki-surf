@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TableOfContents from './components/TableOfContents';
+const data = [
+  {
+    id: '1',
+    name: 'Title1',
+    children: [
+      {
+        id: '1.1',
+        name: 'Sub-1'
+      },
+      {
+        id: '1.2',
+        name: 'Sub-2',
+        children: [
+          {
+            id: '1.2.1',
+            name: 'Sub!'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: '2',
+    name: 'Title2'
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TableOfContents
+      sections={data}
+    />
   );
 }
 
