@@ -6,16 +6,16 @@ The project uses `React`, `TypeScript` and `Styled-Components`.
 ## How to run?
 Navigate to `/back-end` then run the following commands:
 
-**npm install**
+`npm install
 
-**npm run build**
+npm run build`
 
-**npm run start**
+npm run start`
 
 then, navigate to `/front-end` and run:
 
-**npm install**
+`npm install
 
-**npm start**
+npm start`
 
 Type an article title which is available in wikipedia.
