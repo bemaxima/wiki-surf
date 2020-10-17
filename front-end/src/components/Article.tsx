@@ -36,7 +36,7 @@ const Offset = styled.div`
 
 const Article: React.FC<Props> = ({ title, categories, sections }) => {
   return (
-    <Wrapper>
+    <Wrapper data-testid='article'>
       <Column>
         <Title>{title}</Title>
         <Categories items={categories} />

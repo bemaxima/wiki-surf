@@ -11,7 +11,7 @@ interface Props {
   page: string;
 }
 
-const GET_ARTICLE = gql`
+export const GET_ARTICLE = gql`
   query getArticle($page: String) {
     article(page: $page) {
       title
