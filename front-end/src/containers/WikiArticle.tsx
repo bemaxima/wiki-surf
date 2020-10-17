@@ -5,6 +5,7 @@ import { normalizeSections } from '../utils/normalizeSectionsModel';
 import Loading from '../components/Loading';
 import UnhandledError from '../components/UnhandledError';
 import NotFound from '../components/NotFound';
+import ConentWrapper from '../components/ContentWrapper';
 
 interface Props {
   page: string;
@@ -32,26 +33,33 @@ const WikiArticle: React.FC<Props> = ({ page }) => {
     }
   });
 
-  if (loading) {
-    return <Loading />
-  }
-  if (error) {
-    return <UnhandledError />
-  }
-  else {
-    const { article } = data!;
-    if (!article) {
-      return <NotFound />
-    }
-    return (
-      <Article
-        categories={article.categories}
-        title={article.title}
-        sections={normalizeSections(article.sections)}
-      />
-    );
-
-  }
+  return (
+    <ConentWrapper>
+      {
+        (() => {
+          if (loading) {
+            return <Loading />
+          }
+          if (error) {
+            return <UnhandledError />
+          }
+          else {
+            const { article } = data!;
+            if (!article) {
+              return <NotFound />
+            }
+            return (
+              <Article
+                categories={article.categories.map(c => c.split('_').join(' '))}
+                title={article.title}
+                sections={normalizeSections(article.sections)}
+              />
+            );
+          }
+        })()
+      }
+    </ConentWrapper>
+  )
 }
 
 export default WikiArticle;
