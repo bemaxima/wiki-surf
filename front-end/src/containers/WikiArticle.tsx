@@ -19,7 +19,6 @@ const GET_ARTICLE = gql`
       sections {
         title
         id
-        level
         hierarchy
       }
     }
@@ -27,11 +26,14 @@ const GET_ARTICLE = gql`
 `;
 
 const WikiArticle: React.FC<Props> = ({ page }) => {
-  const { loading, error, data } = useQuery<GraphqlArticle>(GET_ARTICLE, {
-    variables: {
-      page
+  const { loading, error, data } = useQuery<GraphqlArticle>(
+    GET_ARTICLE,
+    {
+      variables: {
+        page
+      }
     }
-  });
+  );
 
   return (
     <ConentWrapper>

@@ -6,7 +6,6 @@ interface NormalizedSection {
 
 interface SectionModel {
   id: string;
-  level: number;
   title: string;
   hierarchy: string[];
 }

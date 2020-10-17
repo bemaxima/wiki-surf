@@ -14,13 +14,11 @@ test('Be sure about the normalize section model function works properly on data 
     {
       id: "1",
       hierarchy: ["1"],
-      level: 1,
       title: "Section 1"
     },
     {
       id: "2",
       hierarchy: ["2"],
-      level: 1,
       title: "Section 2"
     }
   ];
@@ -42,31 +40,26 @@ test('Be sure about the normalize section model function works properly on data 
     {
       id: "1",
       hierarchy: ["1"],
-      level: 1,
       title: "Section 1"
     },
     {
       id: "2",
       hierarchy: ["1", "2"],
-      level: 2,
       title: "Section 1.1"
     },
     {
       id: "3",
       hierarchy: ["1", "3"],
-      level: 2,
       title: "Section 1.2"
     },
     {
       id: "4",
       hierarchy: ["1", "4"],
-      level: 2,
       title: "Section 1.3"
     },
     {
       id: "5",
       hierarchy: ["5"],
-      level: 1,
       title: "Section 2"
     }
   ];
@@ -94,31 +87,26 @@ test('Be sure about the normalize section model function works properly on data 
     {
       id: "1",
       hierarchy: ["1"],
-      level: 1,
       title: "Section 1"
     },
     {
       id: "2",
       hierarchy: ["1", "2"],
-      level: 2,
       title: "Section 1.1"
     },
     {
       id: "3",
       hierarchy: ["1", "2", "3"],
-      level: 2,
       title: "Section 1.1.1"
     },
     {
       id: "4",
       hierarchy: ["1", "4"],
-      level: 2,
       title: "Section 1.2"
     },
     {
       id: "5",
       hierarchy: ["5"],
-      level: 1,
       title: "Section 2"
     }
   ];
