@@ -32,7 +32,7 @@ const Title = styled.h3`
   font-weight: bold;
 `;
 
-export default function TableOfContents({ sections }: Props) {
+const TableOfContents: React.FC<Props> = ({ sections }) => {
 
   const renderChildren = (children: NormalizedSection[], prefix: string) => (
     <List>
@@ -60,3 +60,5 @@ export default function TableOfContents({ sections }: Props) {
     </Wrapper>
   );
 }
+
+export default TableOfContents;
