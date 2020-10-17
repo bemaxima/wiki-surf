@@ -1,38 +1,20 @@
-import React from 'react';
-import './App.css';
-import TableOfContents from './components/TableOfContents';
-const data = [
-  {
-    id: '1',
-    name: 'Title1',
-    children: [
-      {
-        id: '1.1',
-        name: 'Sub-1'
-      },
-      {
-        id: '1.2',
-        name: 'Sub-2',
-        children: [
-          {
-            id: '1.2.1',
-            name: 'Sub!'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: '2',
-    name: 'Title2'
-  }
-]
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import WikiArticle from './containers/WikiArticle';
+import { useDebounce } from './hooks/useDebounce';
+
+const Wrapper = styled.div``;
+const Input = styled.input``;
 
 function App() {
+  const [keyword, setKeyword] = useState('');
+  const page = useDebounce(keyword, 500);
+
   return (
-    <TableOfContents
-      sections={data}
-    />
+    <Wrapper>
+      <Input value={keyword} onChange={e => setKeyword(e.target.value)} />
+      {page && <WikiArticle page={page} />}
+    </Wrapper>
   );
 }
 

@@ -3,9 +3,10 @@ export function normalizeArticle(rawArticle: Article): NormalizedArticle {
     categories: rawArticle.categories.filter(c => !c.hidden).map(c => c.category),
     title: rawArticle.displaytitle,
     sections: rawArticle.sections.map(section => ({
-      index: +section.index,
+      id: section.number,
       level: +section.level,
-      title: section.line
+      title: section.line,
+      hierarchy: section.number.split('.')
     })),
     externallinks: rawArticle.externallinks
   };

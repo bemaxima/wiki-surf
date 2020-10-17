@@ -1,7 +1,8 @@
 interface NormalizedSection {
   level: number;
   title: string;
-  index: number;
+  id: string;
+  hierarchy: string[];
 }
 
 interface NormalizedArticle {

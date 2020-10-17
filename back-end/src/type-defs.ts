@@ -5,7 +5,8 @@ export default gql`
   type Section {
     level: Int
     title: String
-    index: Int
+    id: String
+    hierarchy: [String]
   }
 
   type Article {

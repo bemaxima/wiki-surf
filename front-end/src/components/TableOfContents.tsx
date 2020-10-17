@@ -1,14 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Section {
-  id: string;
-  name: string;
-  children?: Section[];
-}
-
 interface Props {
-  sections: Section[];
+  sections: NormalizedSection[];
 }
 
 const Wrapper = styled.div``;
@@ -17,7 +11,7 @@ const ListItem = styled.li``;
 
 export default function TableOfContents({ sections }: Props) {
 
-  const renderChildren = (children: Section[]) => (
+  const renderChildren = (children: NormalizedSection[]) => (
     <List>
       {
         children.map(child => (
