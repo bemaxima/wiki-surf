@@ -9,7 +9,7 @@ const Frame = styled.div`
   display: flex;
   align-content: center;
   flex-direction: column;
-  margin: 15px auto 0 auto;
+  margin: 10px auto 0 auto;
   min-height: 95vh;
   padding: 36px 72px;
   box-sizing: border-box;
@@ -17,7 +17,13 @@ const Frame = styled.div`
   border-radius: 5px;
 
   @media (max-width: 768px) {
+    margin-top: 5px;
     max-width: 100%;
+    padding: 18px 36px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 9px 16px;
   }
 `;
 

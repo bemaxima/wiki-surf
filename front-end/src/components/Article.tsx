@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   }
 `;
 const Title = styled.h2`
-  padding: 20px;
+  padding: 20px 0 20px 0;
   box-sizing: border-box;
   font-size: 2rem;
   font-weight: bold;
