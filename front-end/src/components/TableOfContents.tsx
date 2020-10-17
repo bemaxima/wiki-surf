@@ -53,8 +53,12 @@ const TableOfContents: React.FC<Props> = ({ sections }) => {
     </List>
   );
 
+  if(sections.length === 0) {
+    return null;
+  }
+
   return (
-    <Wrapper>
+    <Wrapper data-testid='table-of-contents'>
       <Title>Contents</Title>
       {renderChildren(sections, '')}
     </Wrapper>
