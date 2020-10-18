@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 const Category = styled.div`
+  margin: 5px 0;
+`;
+
+const Divider = styled.span`
   padding: 2px 5px;
 `;
 
@@ -22,7 +26,7 @@ const Categories: React.FC<Props> = ({ items }) => {
           (category, index) => (
             <Category key={`${category}-${index}`}>
               {category}
-              {length !== index + 1 && <span> | </span>}
+              {length !== index + 1 && <Divider> | </Divider>}
             </Category>
           )
         )
