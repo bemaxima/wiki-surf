@@ -11,7 +11,8 @@ export function useDebounce<T = unknown>(value: T, timeout: number): T | undefin
           setDebouncedValue(value);
         },
         timeout
-      )
+      );
+      return () => clearTimeout(timerId.current);
     },
     [value, timeout]
   )
