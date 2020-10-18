@@ -19,10 +19,10 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
-const Title = styled.h2`
-  padding: 20px 0 20px 0;
+const Title = styled.h2<{ size: 'large' | 'medium' }>`
+  padding: ${props => props.size === 'large' ? '20px' : '10px'} 0;
   box-sizing: border-box;
-  font-size: 2rem;
+  font-size: ${props => props.size === 'large' ? '2rem' : '1.5rem'};
   font-weight: bold;
 `;
 
@@ -38,7 +38,8 @@ const Article: React.FC<Props> = ({ title, categories, sections }) => {
   return (
     <Wrapper data-testid='article'>
       <Column>
-        <Title>{title}</Title>
+        <Title size='large'>{title}</Title>
+        <Title size='medium'>Categories:</Title>
         <Categories items={categories} />
       </Column>
       <Offset />
