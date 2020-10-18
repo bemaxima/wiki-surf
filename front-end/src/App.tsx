@@ -9,12 +9,13 @@ const Frame = styled.div`
   display: flex;
   align-content: center;
   flex-direction: column;
-  margin: 10px auto 0 auto;
-  min-height: 95vh;
+  margin: 0 auto;
+  min-height: 100vh;
   padding: 36px 72px;
   box-sizing: border-box;
   background: #daedef;
   border-radius: 5px;
+  align-self: center;
 
   @media (max-width: 768px) {
     margin-top: 5px;
