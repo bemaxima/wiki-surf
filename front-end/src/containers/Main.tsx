@@ -5,7 +5,7 @@ import { useDebounce } from '../hooks/useDebounce';
 
 const Main: React.FC = () => {
   const [keyword, setKeyword] = useState('');
-  const page = useDebounce(keyword, 500);
+  const page = useDebounce(keyword, 800);
   const input = useRef<HTMLInputElement>(null);
 
   useEffect(
