@@ -1,4 +1,4 @@
-const https: typeof import('https') = require("https");
+import https from "https";
 
 export function get<T>(url: string): Promise<T> {
   return new Promise<T>((resolve, reject) => {
