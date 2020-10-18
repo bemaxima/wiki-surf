@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Input from '../components/Input';
+import InnerInput from '../components/Input';
 import WikiArticle from './WikiArticle';
 import { useDebounce } from '../hooks/useDebounce';
 
@@ -17,10 +17,11 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <Input
+      <InnerInput
         ref={input}
         value={keyword}
         onChange={e => setKeyword(e.target.value)}
+        onClear={() => setKeyword('')}
         placeholder='Enter the page title ...'
       />
       {page && <WikiArticle page={page} />}
