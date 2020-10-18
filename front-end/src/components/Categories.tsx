@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+
 const Category = styled.div`
   margin: 5px 0;
 `;

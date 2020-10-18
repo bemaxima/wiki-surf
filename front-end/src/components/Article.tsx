@@ -19,6 +19,7 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
 const Title = styled.h2<{ size: 'large' | 'medium' }>`
   padding: ${props => props.size === 'large' ? '20px' : '10px'} 0;
   box-sizing: border-box;
@@ -34,20 +35,19 @@ const Offset = styled.div`
   width: 40px;
 `
 
-const Article: React.FC<Props> = ({ title, categories, sections }) => {
-  return (
-    <Wrapper data-testid='article'>
-      <Column>
-        <Title size='large'>{title}</Title>
-        <Title size='medium'>Categories:</Title>
-        <Categories items={categories} />
-      </Column>
-      <Offset />
-      <Column>
-        <TableOfContents sections={sections} />
-      </Column>
-    </Wrapper>
-  )
-}
+const Article: React.FC<Props> = ({ title, categories, sections }) => (
+  <Wrapper data-testid='article'>
+    <Column>
+      <Title size='large'>{title}</Title>
+      <Title size='medium'>Categories:</Title>
+      <Categories items={categories} />
+    </Column>
+    <Offset />
+    <Column>
+      <TableOfContents sections={sections} />
+    </Column>
+  </Wrapper>
+);
+
 
 export default Article;
