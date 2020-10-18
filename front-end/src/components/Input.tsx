@@ -31,7 +31,7 @@ const Button = styled.button`
   transform: translateY(-50%);
   transition: background-color 0.5s;
   background-color: #ddd;
-  :hover {
+  :hover, :focus {
     background-color: #00FA15;
   }
 `;
